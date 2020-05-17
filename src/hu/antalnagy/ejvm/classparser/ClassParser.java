@@ -13,10 +13,21 @@ public class ClassParser {
     public ClassParser(byte[] buffer, String fileName) {
         this.classBytes = buffer;
         this.fileName = fileName;
-        this.parse();
     }
 
-    private void parse() {
+    public int getMinor() {
+        return minor;
+    }
+
+    public int getMajor() {
+        return major;
+    }
+
+    public int getPoolItemCount() {
+        return poolItemCount;
+    }
+
+    public void parse() {
         parseHeader();
         parseConstantPool();
         parseBasicTypeInfo();
