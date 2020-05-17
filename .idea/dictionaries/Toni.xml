@@ -3,6 +3,11 @@
     <words>
       <w>cafebabe</w>
       <w>cpool</w>
+      <w>fieldref</w>
+      <w>invokedynamic</w>
+      <w>methodhandle</w>
+      <w>methodref</w>
+      <w>nameandtype</w>
     </words>
   </dictionary>
 </component>
