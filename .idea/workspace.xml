@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2217afc9-c1c7-4bf9-8738-830d9b5e1c18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Toni.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Toni.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/ClassParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/ClassParserTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/ClassParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/ClassParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/ClassParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/ClassParserTest.java" afterDir="false" />
     </list>
@@ -75,7 +74,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JAVA/Connect-4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -94,8 +93,11 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Info\GitHub\ExperimentalJavaVM\out\production\ExperimentalJavaVM\hu\antalnagy\ejvm\tests\resources\sampleclasses" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassParserTest">
+  <component name="RunManager" selected="JUnit.ClassParserTest.TEST_CPOOL">
     <configuration name="HelloWorld" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.antalnagy.ejvm.tests.resources.sampleclasses.HelloWorld" />
       <module name="ExperimentalJavaVM" />
@@ -122,11 +124,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ClassParserTest.TEST_CPOOL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExperimentalJavaVM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.antalnagy.ejvm.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.antalnagy.ejvm.tests" />
+      <option name="MAIN_CLASS_NAME" value="hu.antalnagy.ejvm.tests.ClassParserTest" />
+      <option name="METHOD_NAME" value="TEST_CPOOL" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassParserTest.TEST_HEADER" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExperimentalJavaVM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.antalnagy.ejvm.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.antalnagy.ejvm.tests" />
+      <option name="MAIN_CLASS_NAME" value="hu.antalnagy.ejvm.tests.ClassParserTest" />
+      <option name="METHOD_NAME" value="TEST_HEADER" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.HelloWorld" />
       <item itemvalue="Application.Sum" />
       <item itemvalue="JUnit.ClassParserTest" />
+      <item itemvalue="JUnit.ClassParserTest.TEST_CPOOL" />
+      <item itemvalue="JUnit.ClassParserTest.TEST_HEADER" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ClassParserTest.TEST_CPOOL" />
+        <item itemvalue="JUnit.ClassParserTest.TEST_HEADER" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -139,7 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589652943344</updated>
       <workItem from="1589652944675" duration="7002000" />
-      <workItem from="1589712411338" duration="12133000" />
+      <workItem from="1589712411338" duration="14229000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1589653248601</created>
@@ -211,22 +253,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589653473862" />
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1589727057303">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1589732139761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589727057303" />
-    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1589727057303">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139761" />
+    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1589732139761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589727057303" />
-    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1589727057303">
+    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139761" />
+    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1589732139760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589727057303" />
-    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1589727057303">
+    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139760" />
+    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1589732139761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589727057303" />
+    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139761" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1589657537260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

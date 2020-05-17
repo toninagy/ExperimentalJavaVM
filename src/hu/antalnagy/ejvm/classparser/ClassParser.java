@@ -59,11 +59,14 @@ public class ClassParser {
     }
     private void parseConstantPool() {
         entries = new ConstantPoolEntry[poolItemCount - 1];
-        for(int i = 0; i<poolItemCount; i++) {
-            int entry = classBytes[current++] & 0xff; //for transforming int into uint
+        for(int i = 1; i < poolItemCount; i++) {
+            int entry = (classBytes[current++] & 0xff); //for transforming int into uint
+
+            System.out.println(entry);
             ConstantPoolType tag = constantsTable[entry];
 
-            if(tag == null) throw new RuntimeException("Unknown Constant Pool tag byte at position " + current);
+            if(tag == null) System.out.println("null");//throw new RuntimeException("Unknown Constant Pool tag byte at position " + (current-1));
+            else System.out.println(tag);
 
             /*To-be continued*/
         }
