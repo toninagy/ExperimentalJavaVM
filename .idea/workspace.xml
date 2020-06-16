@@ -20,12 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2217afc9-c1c7-4bf9-8738-830d9b5e1c18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/resources/sampleclasses/Println.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/ClassParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/ClassParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/Println.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/Println.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/Sum.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/ClassParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/ClassParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/ClassParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/ClassParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/resources/sampleclasses/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/resources/sampleclasses/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,14 +88,18 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="hu.antalnagy.ejvm.classparser" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Info\GitHub\ExperimentalJavaVM\src\resources" />
+      <recent name="D:\Info\GitHub\ExperimentalJavaVM\src\hu\antalnagy\ejvm\classparser" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -97,9 +108,16 @@
       <recent name="D:\Info\GitHub\ExperimentalJavaVM\out\production\ExperimentalJavaVM\hu\antalnagy\ejvm\tests\resources\sampleclasses" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassParserTest.TEST_CPOOL">
+  <component name="RunManager" selected="JUnit.ClassParserTest">
     <configuration name="HelloWorld" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.antalnagy.ejvm.tests.resources.sampleclasses.HelloWorld" />
+      <module name="ExperimentalJavaVM" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Println" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hu.antalnagy.ejvm.tests.resources.sampleclasses.Println" />
       <module name="ExperimentalJavaVM" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,6 +175,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Println" />
       <item itemvalue="Application.HelloWorld" />
       <item itemvalue="Application.Sum" />
       <item itemvalue="JUnit.ClassParserTest" />
@@ -165,8 +184,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClassParserTest.TEST_CPOOL" />
         <item itemvalue="JUnit.ClassParserTest.TEST_HEADER" />
+        <item itemvalue="JUnit.ClassParserTest.TEST_CPOOL" />
       </list>
     </recent_temporary>
   </component>
@@ -229,18 +248,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated Class Parser and tests&#10;Added NIO byte parsing" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589712830720">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592303875125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589712830720" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592303875125" />
     <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1589727443329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589727443329" />
-    <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589712829226">
+    <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592303871078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589712829226" />
+    <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592303871078" />
     <state x="607" y="128" key="CommitChangelistDialog2" timestamp="1589719199159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -253,26 +272,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589653473862" />
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1589732139761">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1592315762332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139761" />
-    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1589732139761">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
+    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1592315762332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139761" />
-    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1589732139760">
+    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
+    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1592315762332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139760" />
-    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1589732139761">
+    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
+    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1592315762332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589732139761" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1589657537260">
+    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1592315639062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589657537260" />
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
+    <state width="1921" height="356" key="GridCell.Tab.1.center" timestamp="1592315639062">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
+    <state width="1921" height="356" key="GridCell.Tab.1.left" timestamp="1592315639062">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
+    <state width="1921" height="356" key="GridCell.Tab.1.right" timestamp="1592315639062">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1592315626914">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592315626914" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589719212550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

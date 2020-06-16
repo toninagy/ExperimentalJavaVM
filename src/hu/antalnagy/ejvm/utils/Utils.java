@@ -31,4 +31,19 @@ public class Utils {
             return bos.toByteArray();
         }
     }
+
+//    public static byte[] yieldBytes2(String fName) throws IOException {
+//        try (var clsFile = new RandomAccessFile(HelloWorld.class.getPackageName() + "." + fName, "r"); final ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
+//            var fileSize = Files.size(Paths.get(fName));
+//            ByteBuffer buffer = ByteBuffer.allocate((int) fileSize);
+//            buffer.order(ByteOrder.LITTLE_ENDIAN);
+//            var inChannel = clsFile.getChannel();
+//            var bytesRead = inChannel.read(buffer);
+//            while(bytesRead > 0) {
+//                bos.write(buffer.array(), 0, bytesRead);
+//                bytesRead = inChannel.read(buffer);
+//            }
+//            return bos.toByteArray();
+//        }
+//    }
 }

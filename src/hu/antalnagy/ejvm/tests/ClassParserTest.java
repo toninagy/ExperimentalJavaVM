@@ -1,6 +1,7 @@
 package hu.antalnagy.ejvm.tests;
 
 import hu.antalnagy.ejvm.classparser.ClassParser;
+import hu.antalnagy.ejvm.classparser.cpool.ConstantPoolType;
 import hu.antalnagy.ejvm.tests.resources.sampleclasses.HelloWorld;
 import hu.antalnagy.ejvm.utils.Utils;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,7 +35,7 @@ class ClassParserTest {
      * @throws IOException
      */
     @Test
-    void TEST_HEADER() throws IOException {
+    void TEST_HEADER() throws IOException, ClassNotFoundException {
 
         sb.append("HelloWorld.class");
 
@@ -46,8 +47,6 @@ class ClassParserTest {
         assertEquals(0, clsParser.getMinor(), "Major version should be 0");
         assertEquals(34, clsParser.getPoolItemCount(), "Pool item count should be 34");
 
-        System.out.println("-------------");
-
         bytesRead = Utils.yieldBytes("Sum.class", cls);
 
         clsParser = new ClassParser(bytesRead, "Sum.class");
@@ -58,11 +57,13 @@ class ClassParserTest {
     }
 
     @Test
-    void TEST_CPOOL() throws IOException {
+    void TEST_CPOOL() throws IOException, ClassNotFoundException {
         sb.append("Println.class");
 
         bytesRead = Utils.yieldBytesNIO(sb.toString());
         ClassParser clsParser = new ClassParser(bytesRead, "Println.class");
         clsParser.parse();
+
+        assertEquals(clsParser.getEntries()[0].getType(), ConstantPoolType.METHODREF, "First CPEntry must be of Method Reference");
     }
 }
