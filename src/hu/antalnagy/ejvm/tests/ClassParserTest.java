@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ClassParserTest {
 
@@ -29,10 +29,9 @@ class ClassParserTest {
         sb.append(clsRelativeString);
     }
 
-    @SuppressWarnings("all")
     /**
      * Test for magic number 0xcafebabe, minor, major version and cpool item count
-     * @throws IOException
+     * @throws IOException If file not found
      */
     @Test
     void TEST_HEADER() throws IOException, ClassNotFoundException {
@@ -65,5 +64,17 @@ class ClassParserTest {
         clsParser.parse();
 
         assertEquals(clsParser.getEntries()[0].getType(), ConstantPoolType.METHODREF, "First CPEntry must be of Method Reference");
+
+        assertTrue(clsParser.getEntries()[0].getCref1().toString().endsWith("2"));
+        assertTrue(clsParser.getEntries()[0].getCref2().toString().endsWith("3"));
+
+        assertNotNull(clsParser.getEntries()[1].getCref1());
+        assertNull(clsParser.getEntries()[1].getCref2());
+
+        assertEquals(ConstantPoolType.UTF8, clsParser.getEntries()[13].getType());
+        assertEquals("Hello World", clsParser.getEntries()[13].getStr());
+
+        assertEquals("this",clsParser.getEntries()[25].getStr());
+        assertEquals("Println.java",clsParser.getEntries()[clsParser.getEntries().length-1].getStr(), "Last entry should be the class's name");
     }
 }

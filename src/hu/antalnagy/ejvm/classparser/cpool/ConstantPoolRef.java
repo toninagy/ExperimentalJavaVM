@@ -1,19 +1,19 @@
 package hu.antalnagy.ejvm.classparser.cpool;
 
 public final class ConstantPoolRef {
-    private final int other;
+    private final int referent;
 
-    public ConstantPoolRef(int other) {
-        this.other = other;
+    public ConstantPoolRef(int referent) {
+        this.referent = referent;
     }
 
-    public int getOther() {
-        return other;
+    public int getReferent() {
+        return referent;
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(other);
+        return Integer.hashCode(referent);
     }
 
     @Override
@@ -21,6 +21,6 @@ public final class ConstantPoolRef {
         if (obj == null) return false;
         if (getClass() != obj.getClass()) return false;
         final ConstantPoolRef other = (ConstantPoolRef) obj;
-        return this.other == other.other;
+        return this.referent == other.referent;
     }
 }

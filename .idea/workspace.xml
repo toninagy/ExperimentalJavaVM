@@ -20,19 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2217afc9-c1c7-4bf9-8738-830d9b5e1c18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/resources/sampleclasses/Println.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/AttributeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/FieldInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/MethodInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Toni.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Toni.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/ClassParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/ClassParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/ClassParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/Println.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/Println.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExperimentalJavaVM/hu/antalnagy/ejvm/tests/resources/sampleclasses/Sum.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/ClassParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/ClassParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/classparser/cpool/ConstantPoolRef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/ClassParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/ClassParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/resources/sampleclasses/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/tests/resources/sampleclasses/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/antalnagy/ejvm/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +108,7 @@
       <recent name="D:\Info\GitHub\ExperimentalJavaVM\out\production\ExperimentalJavaVM\hu\antalnagy\ejvm\tests\resources\sampleclasses" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassParserTest">
+  <component name="RunManager" selected="JUnit.ClassParserTest.TEST_CPOOL">
     <configuration name="HelloWorld" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.antalnagy.ejvm.tests.resources.sampleclasses.HelloWorld" />
       <module name="ExperimentalJavaVM" />
@@ -184,8 +184,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClassParserTest.TEST_HEADER" />
         <item itemvalue="JUnit.ClassParserTest.TEST_CPOOL" />
+        <item itemvalue="JUnit.ClassParserTest.TEST_HEADER" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +201,7 @@
       <updated>1589652943344</updated>
       <workItem from="1589652944675" duration="7002000" />
       <workItem from="1589712411338" duration="14229000" />
+      <workItem from="1592489276827" duration="10566000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1589653248601</created>
@@ -252,10 +253,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592303875125" />
-    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1589727443329">
+    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1592506039190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589727443329" />
+    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1592506039190" />
     <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592303871078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -272,38 +273,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589653473862" />
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1592315762332">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom" timestamp="1592505055731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
-    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1592315762332">
+    <state width="1921" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592505055731" />
+    <state width="1921" height="289" key="GridCell.Tab.0.center" timestamp="1592505055731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
-    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1592315762332">
+    <state width="1921" height="289" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592505055731" />
+    <state width="1921" height="289" key="GridCell.Tab.0.left" timestamp="1592505055730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
-    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1592315762332">
+    <state width="1921" height="289" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592505055730" />
+    <state width="1921" height="289" key="GridCell.Tab.0.right" timestamp="1592505055731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592315762332" />
-    <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1592315639062">
+    <state width="1921" height="289" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592505055731" />
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom" timestamp="1592490449681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
-    <state width="1921" height="356" key="GridCell.Tab.1.center" timestamp="1592315639062">
+    <state width="1921" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592490449681" />
+    <state width="1921" height="356" key="GridCell.Tab.1.center" timestamp="1592490449680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
-    <state width="1921" height="356" key="GridCell.Tab.1.left" timestamp="1592315639062">
+    <state width="1921" height="356" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592490449680" />
+    <state width="1921" height="356" key="GridCell.Tab.1.left" timestamp="1592490449680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
-    <state width="1921" height="356" key="GridCell.Tab.1.right" timestamp="1592315639062">
+    <state width="1921" height="356" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592490449680" />
+    <state width="1921" height="356" key="GridCell.Tab.1.right" timestamp="1592490449681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592315639062" />
+    <state width="1921" height="356" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592490449681" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1592315626914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -6,6 +6,7 @@ public class ConstantPoolEntry {
     private final Number num;
     private final String str;
     private final ConstantPoolRef cref1;
+    private final ConstantPoolRef cref2;
 
     public short getIndex() {
         return index;
@@ -30,9 +31,6 @@ public class ConstantPoolEntry {
     public ConstantPoolRef getCref2() {
         return cref2;
     }
-
-    private final ConstantPoolRef cref2;
-
 
     private ConstantPoolEntry(short i, ConstantPoolType t, Number n, String s, ConstantPoolRef cref1, ConstantPoolRef cref2) {
         index = i;

@@ -5,6 +5,8 @@ import hu.antalnagy.ejvm.classparser.cpool.ConstantPoolRef;
 import hu.antalnagy.ejvm.classparser.cpool.ConstantPoolType;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClassParser {
 
@@ -18,6 +20,34 @@ public class ClassParser {
     private int major;
     private int poolItemCount;
     private int current = 0;
+
+    private int accessFlags = 0;
+    private int thisReference = 0;
+    private int superReference = 0;
+
+    private int iCount = 0;
+    private List<ConstantPoolRef> interfaces = new ArrayList<>();
+
+    private int fCount = 0;
+    private List<FieldInfo> fields = new ArrayList<>();
+
+    private int mCount = 0;
+    private List<MethodInfo> methods = new ArrayList<>();
+
+    private int aCount = 0;
+    private List<AttributeInfo> attributes = new ArrayList<>();
+
+    public int getAccessFlags() {
+        return accessFlags;
+    }
+
+    public int getThisReference() {
+        return thisReference;
+    }
+
+    public int getSuperReference() {
+        return superReference;
+    }
 
     static {
         for(ConstantPoolType cp: ConstantPoolType.values()) {
@@ -64,7 +94,8 @@ public class ClassParser {
         entries = new ConstantPoolEntry[poolItemCount-1];
         for (short i = 1; i < poolItemCount; i++) {
 //            int entry = classBytes[current++] & 0xff;
-            var entry = Byte.toUnsignedInt(classBytes[current++]);
+//            var entry = Byte.toUnsignedInt(classBytes[current++]);
+            var entry = classBytes[current++];
             ConstantPoolType tag = constantsTable[entry];
             if (tag == null) {
                 throw new ClassNotFoundException("Unrecognised tag byte: " + entry + " encountered at position " + current + ". Stopping the parse.");
@@ -123,16 +154,62 @@ public class ClassParser {
         }
     }
     private void parseBasicTypeInfo() {
-        /*TO-DO*/
+        accessFlags = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        thisReference = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        superReference = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+
+        iCount = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        for(short i=0;i<iCount;i++) {
+            interfaces.add(new ConstantPoolRef(((int) classBytes[current++] << 8) + (int) classBytes[current++]));
+        }
     }
     private void parseFields() {
-        /*TO-DO*/
+        fCount = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        for(short i=0;i<fCount;i++) {
+            fields.add(new FieldInfo(
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++],
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++],
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++],
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++]
+            ));
+            var attrCount = fields.get(i).getAttributesCount();
+            for(int j=0;j<attrCount;j++) {
+                fields.get(i).getaInfos()[j] = parseAttribute();
+            }
+        }
+
     }
     private void parseMethods() {
-        /*TO-DO*/
+        mCount = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        for(short i=0;i<mCount;i++) {
+            methods.add(new MethodInfo(
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++],
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++],
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++],
+                    ((int) classBytes[current++] << 8) + (int) classBytes[current++]
+            ));
+            var attrCount = methods.get(i).getAttributesCount();
+            for(int j=0;j<attrCount;j++) {
+                methods.get(i).getaInfos()[j] = parseAttribute();
+            }
+        }
     }
+    //helper
+    private AttributeInfo parseAttribute() {
+        var attrNameIndex = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        var len = ((int) classBytes[current++] << 24) + ((int) classBytes[current++] << 16) + ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        AttributeInfo a = new AttributeInfo(attrNameIndex, len);
+        for(int i=0;i<len;i++) {
+            a.getInfo()[i] = classBytes[current++];
+        }
+        return a;
+    }
+
     private void parseAttributes() {
-        /*TO-DO*/
+        aCount = ((int) classBytes[current++] << 8) + (int) classBytes[current++];
+        for(short i=0;i<aCount; i++) {
+            attributes.add(parseAttribute());
+        }
     }
 
     public ConstantPoolEntry[] getEntries() {
